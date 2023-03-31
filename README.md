@@ -15,3 +15,7 @@ If they are not, just enter `sudo chown -R YOURUSER:YOURGROUP var` outside the P
 ## Code sniffers
 * There are installed PHP CS Fixer and PHPStan static analysis tools
 * To use them and test your code get into the PHP container `docker compose exec php bash` and run `composer fix`
+
+## Tests
+* There is installed PHPUnit testing library
+* To run tests get into the PHP container `docker compose exec php bash` and run `vendor/bin/phpunit`

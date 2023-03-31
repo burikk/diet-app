@@ -1,6 +1,7 @@
 ###> symfony/framework-bundle ###
 /.env.local
 /.env
+/.env.test
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
@@ -14,3 +15,9 @@
 ###> friendsofphp/php-cs-fixer ###
 /.php-cs-fixer.cache
 ###< friendsofphp/php-cs-fixer ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+.phpunit.cache
+###< symfony/phpunit-bridge ###
