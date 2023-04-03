@@ -31,6 +31,6 @@ class DietApiController extends AbstractController
             $request->getDateStart(),
             $request->getDateEnd()
         );
-        return new JsonResponse('OK', Response::HTTP_CREATED);
+        return new JsonResponse('Entity created', Response::HTTP_CREATED);
     }
 }
