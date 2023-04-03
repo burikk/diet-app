@@ -24,7 +24,7 @@ enum CountryCode: string
 
     public function matchDietStrategy(): CountryTypeDietCalculator
     {
-        return match($this) {
+        return match ($this) {
             self::Poland => new PolandTypeDiet($this->getCountryBasePrice()),
             self::Germany => new GermanyTypeDiet($this->getCountryBasePrice()),
             self::GreatBritain => new GreatBritainTypeDiet($this->getCountryBasePrice()),
@@ -34,7 +34,7 @@ enum CountryCode: string
 
     private function getCountryBasePrice(): CountryBasePrice
     {
-        return match($this) {
+        return match ($this) {
             self::Poland => CountryBasePrice::Poland,
             self::Germany => CountryBasePrice::Germany,
             self::GreatBritain => CountryBasePrice::GreatBritain,

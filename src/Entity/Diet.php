@@ -31,7 +31,6 @@ class Diet
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private \DateTime $dateEnd;
 
-
     public function getId(): int
     {
         return $this->id;

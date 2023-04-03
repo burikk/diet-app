@@ -54,7 +54,7 @@ abstract class BaseRequest
     }
 
     /**
-     * Can be disabled per child class
+     * Can be disabled per child class.
      */
     protected function autoValidateRequest(): bool
     {

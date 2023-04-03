@@ -13,6 +13,7 @@ class GreatBritainTypeDiet implements CountryTypeDietCalculator
 
     private const DAYS_UNTIL_PRICE_RAISE = 5;
     private const RATE_UP = 4;
+
     public function __construct(private readonly CountryBasePrice $basePrice)
     {
     }

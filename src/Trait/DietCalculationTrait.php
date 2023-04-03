@@ -11,8 +11,7 @@ trait DietCalculationTrait
         int $totalDays,
         int $daysUntilRaise,
         int|float $rateUp
-    ): int|float
-    {
+    ): int|float {
         $totalAmount = 0;
 
         if ($totalDays > 0 && $totalDays <= $daysUntilRaise) {
@@ -32,8 +31,7 @@ trait DietCalculationTrait
         int|float $rateDrop1,
         int $daysUntilDrop2,
         int|float $rateDrop2
-    ): int|float
-    {
+    ): int|float {
         $totalAmount = 0;
 
         if ($totalDays > 0 && $totalDays <= $daysUntilDrop1) {

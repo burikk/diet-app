@@ -13,6 +13,7 @@ class PolandTypeDiet implements CountryTypeDietCalculator
 
     private const DAYS_UNTIL_PRICE_RAISE = 3;
     private const RATE_UP = 2;
+
     public function __construct(private readonly CountryBasePrice $basePrice)
     {
     }

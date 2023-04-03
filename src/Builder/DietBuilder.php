@@ -41,6 +41,7 @@ class DietBuilder
     public function buildDiet(): Diet
     {
         $diet = new Diet();
+
         return $diet->setCountryCode($this->countryCode->value)
             ->setDateStart($this->dateStart)
             ->setDateEnd($this->dateEnd)
@@ -54,11 +55,11 @@ class DietBuilder
             return $this->totalDays;
         }
 
-        while($dateStart <= $dateEnd) {
+        while ($dateStart <= $dateEnd) {
             if ($dateStart->format('N') < 6 && $dateStart->format('H:i:s') >= '00:00:00' && ($dateEnd->getTimestamp() - $dateStart->getTimestamp()) >= 28800) {
-                $this->totalDays++;
+                ++$this->totalDays;
             }
-            $dateStart = $dateStart->modify('+1 day')->setTime(0,0,0);
+            $dateStart = $dateStart->modify('+1 day')->setTime(0, 0, 0);
         }
 
         return $this->totalDays;
