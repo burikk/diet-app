@@ -25,11 +25,11 @@ class Diet
     #[ORM\Column]
     private int $amount;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private \DateTime $dateStart;
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
+    private \DateTimeImmutable $dateStart;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private \DateTime $dateEnd;
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
+    private \DateTimeImmutable $dateEnd;
 
     public function getId(): int
     {
@@ -72,24 +72,24 @@ class Diet
         return $this;
     }
 
-    public function getDateStart(): \DateTime
+    public function getDateStart(): \DateTimeImmutable
     {
         return $this->dateStart;
     }
 
-    public function setDateStart(\DateTime $dateStart): self
+    public function setDateStart(\DateTimeImmutable $dateStart): self
     {
         $this->dateStart = $dateStart;
 
         return $this;
     }
 
-    public function getDateEnd(): \DateTime
+    public function getDateEnd(): \DateTimeImmutable
     {
         return $this->dateEnd;
     }
 
-    public function setDateEnd(\DateTime $dateEnd): self
+    public function setDateEnd(\DateTimeImmutable $dateEnd): self
     {
         $this->dateEnd = $dateEnd;
 

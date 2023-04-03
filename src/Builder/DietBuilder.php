@@ -13,8 +13,8 @@ class DietBuilder
     use AmountTransformTrait;
 
     private CountryCode $countryCode;
-    private \DateTime $dateStart;
-    private \DateTime $dateEnd;
+    private \DateTimeImmutable $dateStart;
+    private \DateTimeImmutable $dateEnd;
     private int $totalDays = 0;
 
     public function setCountryCode(CountryCode $countryCode): self
@@ -24,14 +24,14 @@ class DietBuilder
         return $this;
     }
 
-    public function setDateStart(\DateTime $dateStart): self
+    public function setDateStart(\DateTimeImmutable $dateStart): self
     {
         $this->dateStart = $dateStart;
 
         return $this;
     }
 
-    public function setDateEnd(\DateTime $dateEnd): self
+    public function setDateEnd(\DateTimeImmutable $dateEnd): self
     {
         $this->dateEnd = $dateEnd;
 
@@ -49,7 +49,7 @@ class DietBuilder
             ->setAmount($this->amount($this->totalDays));
     }
 
-    private function countDays(\DateTime $dateStart, \DateTime $dateEnd): int
+    private function countDays(\DateTimeImmutable $dateStart, \DateTimeImmutable $dateEnd): int
     {
         if ($dateEnd->getTimestamp() - $dateStart->getTimestamp() < 28800) {
             return $this->totalDays;

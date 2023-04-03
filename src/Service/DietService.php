@@ -24,8 +24,8 @@ readonly class DietService
     {
         $diet = $this->dietBuilder
             ->setCountryCode(CountryCode::from($countryCode))
-            ->setDateStart(new \DateTime($dateStart))
-            ->setDateEnd(new \DateTime($dateEnd))
+            ->setDateStart(new \DateTimeImmutable($dateStart))
+            ->setDateEnd(new \DateTimeImmutable($dateEnd))
             ->buildDiet();
         $this->dietRepository->save($diet, true);
 
